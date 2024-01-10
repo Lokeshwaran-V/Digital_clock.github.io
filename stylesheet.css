@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+
+.container{
+
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #07b9f4 , #08001f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.clock_container{
+    display: flex;
+    width: 20%;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    /* flex: 90px 1; */
+    flex-wrap: wrap;
+}
+.clock_container::before{
+    display: flex;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #f41b75;
+    border-radius: 10px;
+    position: absolute;
+    top: -4vh;
+    left: -5%;
+    z-index: 0;
+    background: linear-gradient(145deg, #f41b75, #f41b75);
+    box-shadow:  0px 0px 80px #f41b75,
+                -10px -10px 30px #bebebe;
+}
+
+.clock_container::after{
+    display: flex;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #f41b75;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -4vh;
+    right: -5%;
+    z-index: 0;
+    background: linear-gradient(145deg, #f41b75, #f41b75);
+    box-shadow:  10px 10px 30px #bebebe ,
+                0px 0px 80px #f41b75;
+}
+
+.clock{
+    display: flex;
+    flex: 1280px 1;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    font-weight: 500;
+    background: rgba(235, 0, 255, 0.3);
+    border-radius: 15px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    
+}
+.clock span{
+    display: flex;
+    position: relative;
+    width: 20%;
+    justify-content: center;
+    flex: 40px;
+    flex-wrap: wrap;
+
+}
+
+.clock span:nth-child(1)::after{
+    content: 'HOURS';
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -10px;
+}
+
+.clock span:nth-child(3)::after{
+    content: 'MINUTES';
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -10px;
+}
+
+.clock span:nth-child(5)::after{
+    content: 'SECONDS';
+    font-size: 13px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -10px;
+}
+
